@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CompactInfoTableViewController: UITableViewController {
+class ListTableViewController: UITableViewController {
     var persons: [Person] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +42,14 @@ class CompactInfoTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let personDetailVC = segue.destination as? PersonDetailsViewController else { return }
         personDetailVC.person = sender as? Person
-        guard let fullVC = segue.destination as? FullInfoTableViewController else { return }
+        guard let fullVC = segue.destination as? ContactInfoTableViewController else { return }
         fullVC.persons = persons
     }
     
 
 }
 
-extension CompactInfoTableViewController {
+extension ListTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let person = persons[indexPath.row]
         performSegue(withIdentifier: "showDetailedInfo", sender: person)

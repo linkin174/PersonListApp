@@ -15,8 +15,9 @@ class DataManager {
     class func generatePhones() -> [String] {
         var phones: [String] = []
         for _ in 1...10 {
-            let randomNumber = Int.random(in: 500000000...599999999)
-            phones.append(String(randomNumber))
+//            let randomNumber = Int.random(in: 000...999)
+            let number = "\(Int.random(in: 000...999))-\(Int.random(in: 100...999))-\(Int.random(in: 100...999))"
+            phones.append(String(number))
         }
         return phones
     }
@@ -26,7 +27,7 @@ class DataManager {
         for _ in 1...quantity {
             let providers = ["gmail.com", "hotmail.com", "icloud.com", "live.com", "yahoo.com", "livemail.com"]
             let name = randomString(length: nameLenght)
-            let email = "\(name)@\(providers.randomElement() ?? "email@gmai.com")"
+            let email = "\(name)@\(providers.randomElement() ?? "email@gmail.com")"
             emails.append(email)
         }
         return emails
@@ -35,13 +36,5 @@ class DataManager {
     class func randomString(length: Int) -> String {
       let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
       return String((0..<length).map{ _ in letters.randomElement()! })
-    }
-}
-
-extension DataManager {
-    enum Symbols {
-        case phone
-        case mail
-        
     }
 }

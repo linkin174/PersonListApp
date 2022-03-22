@@ -18,14 +18,11 @@ class TabBarViewController: UITabBarController {
     private func setDestinations() {
         guard let viewControllers = viewControllers else { return }
         for viewController in viewControllers {
-            if viewController.title == "first" {
-                let navigationVC = viewController as? UINavigationController
-                let listTableVC = navigationVC?.topViewController as? CompactInfoTableViewController
-                listTableVC?.persons = persons
-            } else {
-                let navigationVC = viewController as? UINavigationController
-                let infoTableVC = navigationVC?.topViewController as? FullInfoTableViewController
-                infoTableVC?.persons = persons
+            guard let navigationVC = viewController as? UINavigationController else { return }
+            if let listTableVC = navigationVC.topViewController as? ListTableViewController {
+                listTableVC.persons = persons
+            } else if let infoTableVC = navigationVC.topViewController as? ContactInfoTableViewController {
+                infoTableVC.persons = persons
             }
         }
     }

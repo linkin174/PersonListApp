@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FullInfoTableViewController: UITableViewController {
+class ContactInfoTableViewController: UITableViewController {
     var persons: [Person] = []
     override func viewDidLoad() {
         super.viewDidLoad()

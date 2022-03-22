@@ -13,8 +13,8 @@
 		7078E57327E9061B00AA2B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7078E57127E9061B00AA2B2A /* Main.storyboard */; };
 		7078E57527E9061D00AA2B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7078E57427E9061D00AA2B2A /* Assets.xcassets */; };
 		7078E57827E9061D00AA2B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7078E57627E9061D00AA2B2A /* LaunchScreen.storyboard */; };
-		7097910D27E909830040392E /* CompactInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910C27E909830040392E /* CompactInfoTableViewController.swift */; };
-		7097910F27E9099E0040392E /* FullInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910E27E9099E0040392E /* FullInfoTableViewController.swift */; };
+		7097910D27E909830040392E /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910C27E909830040392E /* ListTableViewController.swift */; };
+		7097910F27E9099E0040392E /* ContactInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910E27E9099E0040392E /* ContactInfoTableViewController.swift */; };
 		7097911127E909BE0040392E /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097911027E909BE0040392E /* PersonDetailsViewController.swift */; };
 		7097911327E909D30040392E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097911227E909D30040392E /* Person.swift */; };
 		7097911527E909EC0040392E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097911427E909EC0040392E /* DataManager.swift */; };
@@ -29,8 +29,8 @@
 		7078E57427E9061D00AA2B2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7078E57727E9061D00AA2B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7078E57927E9061D00AA2B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7097910C27E909830040392E /* CompactInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactInfoTableViewController.swift; sourceTree = "<group>"; };
-		7097910E27E9099E0040392E /* FullInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoTableViewController.swift; sourceTree = "<group>"; };
+		7097910C27E909830040392E /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		7097910E27E9099E0040392E /* ContactInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewController.swift; sourceTree = "<group>"; };
 		7097911027E909BE0040392E /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 		7097911227E909D30040392E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7097911427E909EC0040392E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 		7078E58227E9067400AA2B2A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7097910C27E909830040392E /* CompactInfoTableViewController.swift */,
-				7097910E27E9099E0040392E /* FullInfoTableViewController.swift */,
+				7097910C27E909830040392E /* ListTableViewController.swift */,
+				7097910E27E9099E0040392E /* ContactInfoTableViewController.swift */,
 				7097911027E909BE0040392E /* PersonDetailsViewController.swift */,
 				706ADBA427E9FD4800E932A7 /* TabBarViewController.swift */,
 			);
@@ -206,8 +206,8 @@
 				7097911127E909BE0040392E /* PersonDetailsViewController.swift in Sources */,
 				7078E56C27E9061B00AA2B2A /* AppDelegate.swift in Sources */,
 				7097911527E909EC0040392E /* DataManager.swift in Sources */,
-				7097910D27E909830040392E /* CompactInfoTableViewController.swift in Sources */,
-				7097910F27E9099E0040392E /* FullInfoTableViewController.swift in Sources */,
+				7097910D27E909830040392E /* ListTableViewController.swift in Sources */,
+				7097910F27E9099E0040392E /* ContactInfoTableViewController.swift in Sources */,
 				7078E56E27E9061B00AA2B2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
