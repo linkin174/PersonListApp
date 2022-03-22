@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <tabBarAppearance key="standardAppearance" backgroundEffect="regular"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="tintColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="RdF-dg-azP" kind="relationship" relationship="viewControllers" id="ZsF-Ov-LJv"/>
@@ -136,7 +144,9 @@
         <scene sceneID="A0j-51-qZ2">
             <objects>
                 <navigationController storyboardIdentifier="01" title="first" id="RdF-dg-azP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contact List" image="person.circle.fill" catalog="system" id="7eg-te-Pjg"/>
+                    <tabBarItem key="tabBarItem" title="Contact List" id="7eg-te-Pjg">
+                        <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cuP-cK-mpf">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -153,7 +163,9 @@
         <scene sceneID="TmH-5G-6eR">
             <objects>
                 <navigationController storyboardIdentifier="02" title="second" automaticallyAdjustsScrollViewInsets="NO" id="yLS-qg-mGP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Details" image="tray.full.fill" catalog="system" id="nRZ-k2-WN1"/>
+                    <tabBarItem key="tabBarItem" title="Details" id="nRZ-k2-WN1">
+                        <imageReference key="image" image="tray.full.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="smz-UL-YkH">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -174,6 +186,9 @@
         <image name="tray.full.fill" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
