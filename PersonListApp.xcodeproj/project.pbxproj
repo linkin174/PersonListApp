@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		706ADBA527E9FD4800E932A7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706ADBA427E9FD4800E932A7 /* TabBarViewController.swift */; };
 		7078E56C27E9061B00AA2B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7078E56B27E9061B00AA2B2A /* AppDelegate.swift */; };
 		7078E56E27E9061B00AA2B2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7078E56D27E9061B00AA2B2A /* SceneDelegate.swift */; };
 		7078E57327E9061B00AA2B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7078E57127E9061B00AA2B2A /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		706ADBA427E9FD4800E932A7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7078E56827E9061B00AA2B2A /* PersonListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7078E56B27E9061B00AA2B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7078E56D27E9061B00AA2B2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				7097910C27E909830040392E /* CompactInfoTableViewController.swift */,
 				7097910E27E9099E0040392E /* FullInfoTableViewController.swift */,
 				7097911027E909BE0040392E /* PersonDetailsViewController.swift */,
+				706ADBA427E9FD4800E932A7 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706ADBA527E9FD4800E932A7 /* TabBarViewController.swift in Sources */,
 				7097911327E909D30040392E /* Person.swift in Sources */,
 				7097911127E909BE0040392E /* PersonDetailsViewController.swift in Sources */,
 				7078E56C27E9061B00AA2B2A /* AppDelegate.swift in Sources */,

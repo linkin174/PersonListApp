@@ -8,10 +8,10 @@
 import UIKit
 
 class CompactInfoTableViewController: UITableViewController {
-    private var persons = DataManager.createPersons()
+    var persons: [Person] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        debugPrint(persons)
+//        debugPrint(persons)
     }
 
     // MARK: - Table view data source
@@ -28,13 +28,13 @@ class CompactInfoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "compactInfo", for: indexPath)
         let contact = persons[indexPath.row]
-        debugPrint(contact)
         var content = cell.defaultContentConfiguration()
         content.text = contact.fullName
         cell.contentConfiguration = content
-        
         return cell
     }
+    
+    
     
     // MARK: - Navigation
 
@@ -42,6 +42,8 @@ class CompactInfoTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let personDetailVC = segue.destination as? PersonDetailsViewController else { return }
         personDetailVC.person = sender as? Person
+        guard let fullVC = segue.destination as? FullInfoTableViewController else { return }
+        fullVC.persons = persons
     }
     
 
