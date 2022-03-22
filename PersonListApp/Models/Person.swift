@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct Person {
+
+    let firstName: String
+    let lastName: String
+    let email: String
+    let telephoneNumber: String
+    var fullName: String {
+        "\(firstName) \(lastName)"
+    }
+}

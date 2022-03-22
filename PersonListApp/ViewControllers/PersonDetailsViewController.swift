@@ -8,11 +8,16 @@
 import UIKit
 
 class PersonDetailsViewController: UIViewController {
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var phoneNumberLabel: UILabel!
+    
+    var person: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.title = person.fullName
+        emailLabel.text = "Email: \(person.email)"
+        phoneNumberLabel.text = "Phone Number: \(person.telephoneNumber)"
     }
     
 
