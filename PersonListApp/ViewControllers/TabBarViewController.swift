@@ -8,15 +8,15 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-    private var persons = DataManager.createPersons()
-    
+    private var persons = Person.createPersons(10)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setDestinations()
     }
-    
+
     private func setDestinations() {
-        guard let viewControllers = self.viewControllers else { return }
+        guard let viewControllers = viewControllers else { return }
         for viewController in viewControllers {
             if viewController.title == "first" {
                 let navigationVC = viewController as? UINavigationController
@@ -27,7 +27,6 @@ class TabBarViewController: UITabBarController {
                 let infoTableVC = navigationVC?.topViewController as? FullInfoTableViewController
                 infoTableVC?.persons = persons
             }
-            }
+        }
     }
 }
-

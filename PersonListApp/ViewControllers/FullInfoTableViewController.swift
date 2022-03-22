@@ -24,7 +24,7 @@ class FullInfoTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+       2
     }
 
     
@@ -34,7 +34,8 @@ class FullInfoTableViewController: UITableViewController {
         let contact = persons[indexPath.section]
         var content = cell.defaultContentConfiguration()
         if indexPath.row == 0 {
-            content.text = contact.telephoneNumber
+            content.text = contact.phoneNumber
+//            content.image = 
         } else {
             content.text = contact.email
         }

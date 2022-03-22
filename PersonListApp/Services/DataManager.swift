@@ -6,21 +6,11 @@
 //
 
 class DataManager {
-    static let names = ["Alex", "Tim", "Phil", "Alison", "Robert", "Amanda", "Andrew", "Samantha", "Stephany", "Rebecca"]
-    static let surnames = ["Smith", "Cook", "Janson", "Peterson", "Pennyworth", "Blake", "Williams", "Gibson", "Martin", "Jordan"]
-    static let emails = generateEmails(10, nameLenght: 8)
-    static let phones = generatePhones()
-    
-    static func createPersons(_ quantity: Int) -> [Person] {
-        var persons: [Person] = []
-        for _ in 1...quantity {
-            persons.append(Person(firstName: names.randomElement()!,
-                                  lastName: surnames.randomElement()!,
-                                  email: emails.randomElement()!,
-                                  telephoneNumber: phones.randomElement()!))
-        }
-        return persons
-    }
+    static let shared = DataManager()
+    let names = ["Alex", "Tim", "Phil", "Alison", "Robert", "Amanda", "Andrew", "Samantha", "Stephany", "Rebecca"]
+    let surnames = ["Smith", "Cook", "Janson", "Peterson", "Pennyworth", "Blake", "Williams", "Gibson", "Martin", "Jordan"]
+    let emails = generateEmails(10, nameLenght: 10)
+    let phones = generatePhones()
     
     class func generatePhones() -> [String] {
         var phones: [String] = []
@@ -48,3 +38,10 @@ class DataManager {
     }
 }
 
+extension DataManager {
+    enum Symbols {
+        case phone
+        case mail
+        
+    }
+}
