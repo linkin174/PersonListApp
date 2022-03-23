@@ -66,12 +66,12 @@
 		7078E56A27E9061B00AA2B2A /* PersonListApp */ = {
 			isa = PBXGroup;
 			children = (
-				7078E58427E9068B00AA2B2A /* Models */,
-				7078E58327E9068000AA2B2A /* Services */,
-				7078E57F27E9064000AA2B2A /* App */,
 				7078E58227E9067400AA2B2A /* ViewControllers */,
 				7078E58027E9065C00AA2B2A /* Storyboards */,
+				7078E58427E9068B00AA2B2A /* Models */,
+				7078E58327E9068000AA2B2A /* Services */,
 				7078E58127E9066C00AA2B2A /* Resources */,
+				7078E57F27E9064000AA2B2A /* App */,
 			);
 			path = PersonListApp;
 			sourceTree = "<group>";
