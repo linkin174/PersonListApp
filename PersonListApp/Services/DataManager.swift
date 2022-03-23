@@ -7,26 +7,34 @@
 
 class DataManager {
     static let shared = DataManager()
-    let names = ["Alex", "Tim", "Phil", "Alison", "Robert", "Amanda", "Andrew", "Samantha", "Stephany", "Rebecca"]
-    let surnames = ["Smith", "Cook", "Janson", "Peterson", "Pennyworth", "Blake", "Williams", "Gibson", "Martin", "Jordan"]
-    let emails = generateEmails(10, nameLenght: 10)
-    let phones = generatePhones()
-    
+    let names = ["Alex", "Tim", "Phil", "Alison", "Robert", "Amanda", "Andrew", "Samantha", "Stephany", "Rebecca"].shuffled()
+    let surnames = ["Smith", "Cook", "Janson", "Peterson", "Pennyworth", "Blake", "Williams", "Gibson", "Martin", "Jordan"].shuffled()
+    let emails = generateEmails().shuffled()
+    let phones = generatePhones().shuffled()
+}
+
+extension DataManager {
     class func generatePhones() -> [String] {
         var phones: [String] = []
         for _ in 1...10 {
-//            let randomNumber = Int.random(in: 000...999)
-            let number = "\(Int.random(in: 000...999))-\(Int.random(in: 100...999))-\(Int.random(in: 100...999))"
-            phones.append(String(number))
+            let randomNumber = Int.random(in: 500000000...999999999)
+            var string = String(randomNumber)
+            var offset = 3
+            while offset <= 7 {
+                let index = string.index(string.startIndex, offsetBy: offset)
+                string.insert("-", at: index)
+                offset += 4
+            }
+            phones.append(String(string))
         }
         return phones
     }
     
-    class func generateEmails(_ quantity: Int, nameLenght: Int) -> [String] {
+    class func generateEmails() -> [String] {
         var emails: [String] = []
-        for _ in 1...quantity {
+        for _ in 1...10 {
             let providers = ["gmail.com", "hotmail.com", "icloud.com", "live.com", "yahoo.com", "livemail.com"]
-            let name = randomString(length: nameLenght)
+            let name = randomString(length: Int.random(in: 6...8))
             let email = "\(name)@\(providers.randomElement() ?? "email@gmail.com")"
             emails.append(email)
         }

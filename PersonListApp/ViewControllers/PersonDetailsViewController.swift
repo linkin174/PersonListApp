@@ -8,27 +8,21 @@
 import UIKit
 
 class PersonDetailsViewController: UIViewController {
+    //MARK: - IBOutlets
+    
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var phoneNumberLabel: UILabel!
     
+    //MARK: - Public Properties
+    
     var person: Person!
-
+    
+    //MARK: - Override Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = person.fullName
-        emailLabel.text = "Email: \(String(describing: person.email))"
-        phoneNumberLabel.text = "Phone Number: \(String(describing: person.phoneNumber))"
+        emailLabel.text = "Email: \(person.contacts.email)"
+        phoneNumberLabel.text = "Phone Number: \(person.contacts.phoneNumber)"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -8,20 +8,25 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
+    //MARK: - Private Properties
+    
     private var persons = Person.createPersons(10)
-
+    
+    //MARK: - Override Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setDestinations()
+        pushDataToDestinations()
     }
-
-    private func setDestinations() {
+    //MARK: - Private Methods
+    
+    private func pushDataToDestinations() {
         guard let viewControllers = viewControllers else { return }
         for viewController in viewControllers {
             guard let navigationVC = viewController as? UINavigationController else { return }
             if let listTableVC = navigationVC.topViewController as? ListTableViewController {
                 listTableVC.persons = persons
-            } else if let infoTableVC = navigationVC.topViewController as? ContactInfoTableViewController {
+            } else if let infoTableVC = navigationVC.topViewController as? InfoTableViewController {
                 infoTableVC.persons = persons
             }
         }
