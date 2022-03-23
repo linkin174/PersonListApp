@@ -22,7 +22,7 @@ class PersonDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = person.fullName
-        emailLabel.text = "Email: \(person.contacts.email)"
-        phoneNumberLabel.text = "Phone Number: \(person.contacts.phoneNumber)"
+        emailLabel.text = "Email: \(person.email)"
+        phoneNumberLabel.text = "Phone Number: \(person.phoneNumber)"
     }
 }

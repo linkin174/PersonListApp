@@ -8,7 +8,8 @@
 struct Person {
     let firstName: String
     let lastName: String
-    let contacts: (email: String, phoneNumber: String)
+    let email: String
+    let phoneNumber: String
     var fullName: String {
         "\(firstName) \(lastName)"
     }
@@ -19,8 +20,8 @@ struct Person {
             let person = Person(
                 firstName: DataManager.names[index],
                 lastName: DataManager.surnames[index],
-                contacts: (email: DataManager.emails[index],
-                           phoneNumber: DataManager.phones[index]))
+                email: DataManager.emails[index],
+                phoneNumber: DataManager.phones[index])
             persons.append(person)
         }
         return persons
