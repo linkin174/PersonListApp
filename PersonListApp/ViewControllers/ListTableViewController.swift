@@ -9,10 +9,6 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     var persons: [Person] = []
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        debugPrint(persons)
-    }
 
     // MARK: - Table view data source
     
