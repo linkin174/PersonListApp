@@ -13,7 +13,7 @@ struct Person {
         "\(firstName) \(lastName)"
     }
 
-    static func createPersons(_ quantity: Int) -> [Person] {
+    static func createPersons() -> [Person] {
         var persons: [Person] = []
         for index in 0 ..< DataManager.shared.names.count {
             let person = Person(

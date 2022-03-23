@@ -10,7 +10,7 @@ import UIKit
 class TabBarViewController: UITabBarController {
     //MARK: - Private Properties
     
-    private var persons = Person.createPersons(10)
+    private var persons = Person.createPersons()
     
     //MARK: - Override Methods
     
