@@ -8,7 +8,7 @@
 import UIKit
 
 class InfoTableViewController: UITableViewController {
-    //MARK: - Public Properties
+    // MARK: - Public Properties
     
     var persons: [Person] = []
     
@@ -23,7 +23,7 @@ class InfoTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        persons[section].rows
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

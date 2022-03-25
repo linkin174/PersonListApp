@@ -9,13 +9,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="PPN-7f-fkA">
             <objects>
-                <navigationController id="Y4A-dT-Ces" customClass="NavigationViewController" customModule="PersonListApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hcV-ej-I13">
+                <navigationController id="Y4A-dT-Ces" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" alpha="0.5" contentMode="scaleToFill" largeTitles="YES" id="hcV-ej-I13">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" systemColor="linkColor"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance" backgroundEffect="systemUltraThinMaterial">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="Wm7-cF-Hog" kind="relationship" relationship="rootViewController" id="euJ-rU-fTH"/>
@@ -169,6 +177,9 @@
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="tray.fill" catalog="system" width="128" height="88"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

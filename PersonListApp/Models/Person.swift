@@ -13,6 +13,9 @@ struct Person {
     var fullName: String {
         "\(firstName) \(lastName)"
     }
+    var rows: Int {
+        [email, phoneNumber].count
+    }
 
     static func createPersons() -> [Person] {
         var persons: [Person] = []
